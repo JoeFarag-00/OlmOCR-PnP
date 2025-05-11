@@ -1,5 +1,6 @@
 Input_PDFs/*.pdf
+Chunked_PDFs/
+Output_PDFs/
 __pycache__/
 *.py[cod]
-*.pyo
 .env
