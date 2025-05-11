@@ -45,7 +45,6 @@ class OCRClient:
             pass
 
     def process(self, pdf_path):
-        """Uploads, processes, and returns OCR text or None."""
         try:
             inp = WebDriverWait(self.driver, MAX_WAIT_TIME_UPLOAD_ELEMENT).until(
                 EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))
