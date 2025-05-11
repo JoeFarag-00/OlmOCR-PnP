@@ -23,29 +23,6 @@ What is included:
  - Processing millions of PDFs through a finetuned model using Sglang - [pipeline.py](https://github.com/allenai/olmocr/blob/main/olmocr/pipeline.py)
  - Viewing [Dolma docs](https://github.com/allenai/dolma) created from PDFs - [dolmaviewer.py](https://github.com/allenai/olmocr/blob/main/olmocr/viewer/dolmaviewer.py)
 
-## Team
-
-<!-- start team -->
-
-**olmOCR** is developed and maintained by the AllenNLP team, backed by [the Allen Institute for Artificial Intelligence (AI2)](https://allenai.org/).
-AI2 is a non-profit institute with the mission to contribute to humanity through high-impact AI research and engineering.
-To learn more about who specifically contributed to this codebase, see [our contributors](https://github.com/allenai/olmocr/graphs/contributors) page.
-
-<!-- end team -->
-
-## 📦 Project Structure
-olmOCR-PnP/
-├── config.py # ➡️ global settings & folder paths
-├── logger.py # 📝 file-based logging setup
-├── pdf_chunker.py # 📄 PDFChunker: splits big PDFs into 10-page parts
-├── ocr_client.py # 🤖 OCRClient: automates upload & “Copy” via Selenium
-├── main.py # 🎯 Main: orchestrates chunking → OCR → assemble text
-├── requirements.txt # 📦 Python dependencies
-├── Input_PDFs/ # 📥 drop your .pdf files here (ignored by Git)
-├── Chunked_PDFs/ # 🔀 intermediate 10-page chunks (auto-created)
-└── Output_PDFs/ # 📤 final .txt outputs & ingestion_process.log
----
-
 ## ✨ Features
 
 - **Zero-config**: No API keys or complex setup  
@@ -66,6 +43,11 @@ olmOCR-PnP/
 2. **Install dependencies**  
    ```bash
     pip install -r requirements.txt
+
+3. **Run main.py**  
+   ```bash
+    python main.py
+
 
 ## License
 
