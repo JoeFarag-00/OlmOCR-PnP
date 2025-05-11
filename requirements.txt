@@ -1,5 +1,5 @@
-selenium>=4.0.0
 webdriver-manager>=4.0.0
+selenium>=4.0.0
 tqdm>=4.0.0
 pyperclip>=1.8.0
 PyPDF2>=3.0.0
