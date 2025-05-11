@@ -15,12 +15,11 @@ class main:
     def run(self):
         self.chunker.chunk_all()
         chunks = sorted(os.listdir(CHUNK_FOLDER))
-
         groups = defaultdict(list)
+        
         for fname in chunks:
             base = fname.rsplit('_part', 1)[0]
             groups[base].append(os.path.join(CHUNK_FOLDER, fname))
-
         for base, paths in tqdm(groups.items(), desc="PDFs", unit="pdf"):
             collected = []
             for p in tqdm(paths, desc=f"Chunks for {base}", unit="chunk", leave=False):
