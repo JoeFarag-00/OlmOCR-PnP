@@ -1,0 +1,5 @@
+Input_PDFs/*.pdf
+__pycache__/
+*.py[cod]
+*.pyo
+.env
