@@ -5,7 +5,7 @@ INPUT_FOLDER = os.path.join(BASE_DIR, "Input_PDFs")
 CHUNK_FOLDER = os.path.join(BASE_DIR, "Chunked_PDFs")
 OUTPUT_FOLDER = os.path.join(BASE_DIR, "Output_PDFs")
 OLMOCR_URL = "https://olmocr.allenai.org/"
-HEADLESS_MODE = False
+HEADLESS_MODE = True
 
 MAX_WAIT_TIME_PAGE_LOAD = 20
 MAX_WAIT_TIME_ACCEPT_BTN = 7

@@ -1,6 +1,11 @@
 Input_PDFs/*.pdf
 Chunked_PDFs/
+Output_PDFs-archive/
 Output_PDFs/
+Output_Cleaned/
 __pycache__/
 *.py[cod]
 .env
+cleaning_report.xlsx
+ingestion_process.log
+Tools/~$cleaning_report.xlsx
