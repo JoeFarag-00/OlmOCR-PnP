@@ -4,9 +4,7 @@ from config import OUTPUT_FOLDER, LOG_FILE_NAME, LOG_FORMAT
 
 logger = logging.getLogger('OlmOCR_Ingester')
 
-
 def setup_file_logging():
-    """Configures file logging to OUTPUT_FOLDER."""
     logger.setLevel(logging.INFO)
     if logger.hasHandlers():
         logger.handlers.clear()
