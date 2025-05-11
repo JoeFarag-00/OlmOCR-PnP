@@ -2,16 +2,12 @@ import os
 import re
 import pandas as pd
 
-# Define allowed characters
 allowed_pattern = re.compile(r'[A-Za-z0-9\u0600-\u06FF\s.,;:!?(){}\[\]\'"@#$%^&*+=<>|\\/~`_-]')
 
-# Directory with text files
-directory = 'Output_PDFs'  # change as needed
+directory = 'Output_PDFs'  
 
-# Track edits
 edit_log = []
 
-# Loop through all text files
 for filename in os.listdir(directory):
     if filename.endswith('.txt'):
         file_path = os.path.join(directory, filename)
@@ -27,7 +23,6 @@ for filename in os.listdir(directory):
             else:
                 removed_chars.add(char)
 
-        # Only rewrite the file if something was removed
         if removed_chars:
             with open(file_path, 'w', encoding='utf-8') as file:
                 file.write(cleaned_content)
@@ -37,7 +32,6 @@ for filename in os.listdir(directory):
                 'removed_characters': ''.join(sorted(removed_chars))
             })
 
-# Save results to Excel
 if edit_log:
     df = pd.DataFrame(edit_log)
     df.to_excel('Tools/cleaning_report.xlsx', index=False)
