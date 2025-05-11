@@ -34,14 +34,13 @@ To learn more about who specifically contributed to this codebase, see [our cont
 <!-- end team -->
 
 ## 📦 Project Structure
-olmocr4free/
+OlmOCR-PnP/
 ├── config.py # ➡️ global settings & folder paths
 ├── logger.py # 📝 file-based logging setup
 ├── pdf_chunker.py # 📄 PDFChunker: splits big PDFs into 10-page parts
 ├── ocr_client.py # 🤖 OCRClient: automates upload & “Copy” via Selenium
 ├── main.py # 🎯 Main: orchestrates chunking → OCR → assemble text
 ├── requirements.txt # 📦 Python dependencies
-├── .gitignore # ❌ ignores Input/Chunked/Output folders & artifacts
 ├── Input_PDFs/ # 📥 drop your .pdf files here (ignored by Git)
 ├── Chunked_PDFs/ # 🔀 intermediate 10-page chunks (auto-created)
 └── Output_PDFs/ # 📤 final .txt outputs & ingestion_process.log
@@ -66,7 +65,7 @@ olmocr4free/
 
 2. **Install dependencies**  
    ```bash
-  pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ## License
 
