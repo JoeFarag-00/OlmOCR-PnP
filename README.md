@@ -3,10 +3,10 @@
 <img src="https://github.com/user-attachments/assets/d70c8644-3e64-4230-98c3-c52fddaeccb6" alt="olmOCR Logo" width="300"/>
 <br/>
   <br>
-  <h1>olmOCR-Pnp</h1>
+  <h1>olmOCR-PnP</h1>
 </div>
 
-# 🚀 olmOCR with Plug & Play
+# 🚀 olmOCR Plug & Play
 
 **Plug-and-play PDF → Text OCR using AllenAI’s olmOCR web UI**  
 _No setup needed—just drop your PDFs and go!_
