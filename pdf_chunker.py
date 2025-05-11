@@ -15,7 +15,6 @@ class PDFChunker:
         total = len(reader.pages)
         parts = ((total - 1) // self.chunk_size) + 1
         base = os.path.splitext(fname)[0]
-
         for i in range(parts):
             writer = PdfWriter()
             start = i * self.chunk_size
