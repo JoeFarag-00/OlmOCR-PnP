@@ -3,15 +3,15 @@
 <img src="https://github.com/user-attachments/assets/d70c8644-3e64-4230-98c3-c52fddaeccb6" alt="olmOCR Logo" width="300"/>
 <br/>
   <br>
-  <h1>OlmOCR</h1>
+  <h1>olmOCR</h1>
 </div>
 
-# 🚀 OlmOCR-PnP
+# 🚀 olmOCR-PnP
 
-**Plug-and-play PDF → Text OCR using AllenAI’s OlmOCR web UI**  
+**Plug-and-play PDF → Text OCR using AllenAI’s olmOCR web UI**  
 _No setup needed—just drop your PDFs and go!_
 
-This repo is just a wrapper repurposing the OlmOCR toolkit demo for production without any further setup.
+This repo is just a wrapper repurposing the olmOCR toolkit demo for production without any further setup.
 
 Try the online demo: [https://olmocr.allenai.org/](https://olmocr.allenai.org/)
 
@@ -34,7 +34,7 @@ To learn more about who specifically contributed to this codebase, see [our cont
 <!-- end team -->
 
 ## 📦 Project Structure
-OlmOCR-PnP/
+olmOCR-PnP/
 ├── config.py # ➡️ global settings & folder paths
 ├── logger.py # 📝 file-based logging setup
 ├── pdf_chunker.py # 📄 PDFChunker: splits big PDFs into 10-page parts
