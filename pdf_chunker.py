@@ -9,11 +9,6 @@ class PDFChunker:
         self.chunk_size = chunk_size
         os.makedirs(CHUNK_FOLDER, exist_ok=True)
 
-    def chunk_all(self):
-        files = [f for f in os.listdir(INPUT_FOLDER) if f.lower().endswith('.pdf')]
-        for fname in tqdm(files, desc="Chunking PDFs", unit="file"):
-            self._chunk_file(fname)
-
     def _chunk_file(self, fname):
         path = os.path.join(INPUT_FOLDER, fname)
         reader = PdfReader(path)
@@ -32,3 +27,8 @@ class PDFChunker:
             with open(out_path, 'wb') as out_f:
                 writer.write(out_f)
         logger.info(f"Chunked '{fname}' into {parts} parts.")
+
+    def chunk_all(self):
+        files = [f for f in os.listdir(INPUT_FOLDER) if f.lower().endswith('.pdf')]
+        for fname in tqdm(files, desc="Chunking PDFs", unit="file"):
+            self._chunk_file(fname)
