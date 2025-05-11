@@ -12,7 +12,7 @@ if not API_KEY:
     raise RuntimeError("🔑 GROQ_API_KEY not found in .env")
 
 client = Groq(api_key=API_KEY)
-MODEL = "llama3-70b-8192"
+MODEL = "deepseek-r1-distill-llama-70b"
 TOKEN_LIMIT = 5000  # safe headroom
 
 INPUT_DIR = Path("Output_PDFs")
@@ -30,7 +30,7 @@ You are a Markdown-cleaning assistant. Given the raw Markdown content, do the fo
 Return ONLY the cleaned Markdown.
 """.strip()
 
-SPLITTER_PATTERN = re.compile(4. If the markdowns needs no change, then return the same markdowns unedited.
+SPLITTER_PATTERN = re.compile(
     r"(?:^|\n)(---\s*Page Break\s*---|=== Chunk Break ===)(?:\n|$)",
     flags=re.IGNORECASE
 )
