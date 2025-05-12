@@ -13,22 +13,17 @@ class main:
         self.ocr = OCRClient()
 
     def run(self):
-        # chunk all PDFs
         self.chunker.chunk_all()
 
-        # grab all chunk filenames and group them by base PDF name
         chunks = sorted(os.listdir(CHUNK_FOLDER))
         groups = defaultdict(list)
         for fname in chunks:
             base = fname.rsplit('_part', 1)[0]
             groups[base].append(os.path.join(CHUNK_FOLDER, fname))
 
-        # process each PDF’s chunks
         for base, paths in tqdm(groups.items(), desc="PDFs", unit="pdf"):
-            # build the output path
             out_txt = os.path.join(OUTPUT_FOLDER, f"{base}.txt")
 
-            # 🚀 Skip if already done
             if os.path.exists(out_txt):
                 logger.info(f"Skipping '{base}' – '{base}.txt' already exists.")
                 continue
