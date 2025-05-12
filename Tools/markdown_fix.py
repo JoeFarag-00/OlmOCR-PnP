@@ -11,7 +11,7 @@ if not API_KEY:
     raise RuntimeError("🔑 GROQ_API_KEY not found in .env")
 
 client = Groq(api_key=API_KEY)
-MODEL = "deepseek-r1-distill-llama-70b"
+MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
 TOKEN_LIMIT = 5000  
 
 INPUT_DIR = Path("Output_PDFs")
