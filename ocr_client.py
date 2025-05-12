@@ -66,7 +66,7 @@ class OCRClient:
                 txt = pyperclip.paste().strip()
                 if txt:
                     texts.append(txt)
-            return "\n\n---\nPage Break\n---\n\n".join(texts)
+            return "♦♦♦".join(texts)
         except Exception as e:
             logger.error(f"OCR error for {pdf_path}: {e}", exc_info=True)
             return None

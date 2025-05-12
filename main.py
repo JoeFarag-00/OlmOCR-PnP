@@ -37,7 +37,7 @@ class main:
             if collected:
                 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
                 with open(out_txt, 'w', encoding='utf-8') as f:
-                    f.write("\n\n=== Chunk Break ===\n\n".join(collected))
+                    f.write("♦♦♦".join(collected))
                 logger.info(f"Wrote OCR output to '{out_txt}'")
 
         self.ocr.close()
