@@ -11,3 +11,4 @@ ingestion_process.log
 Tools/~$cleaning_report.xlsx
 index.html
 Tools/tts.py
+Tools/token_stats.xlsx
