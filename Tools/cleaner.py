@@ -2,7 +2,7 @@ import os
 import re
 import pandas as pd
 
-allowed_pattern = re.compile(r'[A-Za-z0-9\u0600-\u06FF\s.,;:!?(){}\[\]\'"@#$%^&*+=<>|\\/~`_-]')
+allowed_pattern = re.compile(r'[A-Za-z0-9\u0600-\u06FF\s.,;:!?(){}\[\]\'"@#$%^&*+=<>|\\/~`_♦-]')
 
 directory = 'Output_PDFs'  
 
